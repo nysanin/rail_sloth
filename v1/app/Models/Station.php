@@ -15,6 +15,6 @@ class Station extends Model
 
     public function trains()
     {
-        return $this->hasManyThrough(TrainTrip::class, Train::class);
+        return $this->hasManyThrough(CourseTrain::class, Train::class);
     }
 }
