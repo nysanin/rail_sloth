@@ -4,22 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CourseTrain extends Model
+class TrainTrips extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
+    public $timestamps=false;
     protected $fillable=[
-        'train_id', 'station_id',
+      'train_id', 'started_at', 'planned_at', 'arrived_at', 'last_synchro_at', 'delayed', 'cancelled', 'special_info',
+        'timezone',
     ];
 
     public function train()
     {
         return $this->belongsTo(Train::class);
-    }
-
-    public function station()
-    {
-        return $this->belongsTo(Station::class);
     }
 }
