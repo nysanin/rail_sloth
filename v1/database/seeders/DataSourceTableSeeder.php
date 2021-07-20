@@ -15,8 +15,8 @@ class DataSourceTableSeeder extends Seeder
     public function run()
     {
         DataSource::create([
-           'name'=>'InfoPasażer',
-           'endpoint'=>'https://infopasazer.intercity.pl/?p={object_type}&id={identifier}',
+            'name'=>'InfoPasażer',
+            'endpoint'=>'https://infopasazer.intercity.pl/?p={object_type}&id={identifier}',
         ]);
     }
 }

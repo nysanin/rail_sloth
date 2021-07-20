@@ -19,11 +19,11 @@ class CreateTrainTripsTable extends Migration
             $table->dateTime('started_at');
             $table->dateTime('planned_at');
             $table->dateTime('arrived_at')->nullable();
-            $table->dateTime('last_synchro_at');
+            $table->dateTime('last_synchro_at')->default(Carbon\Carbon::now());
             $table->boolean('delayed')->default(false);
             $table->boolean('cancelled')->default(false);
             $table->text('special_info')->nullable();
-            $table->string('timezone', 4)->default('UTC +1');
+            $table->string('timezone', 6)->default('UTC +1');
             $table->foreign('train_id')->references('id')->on('trains');
         });
     }

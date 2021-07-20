@@ -10,7 +10,7 @@ class DataSource extends Model
     use HasFactory;
     public $timestamps=false;
     protected $table=[
-        'name', 'endpoint', 'specials',
+        'name', 'endpoint',
     ];
 
     public function stations()

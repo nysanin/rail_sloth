@@ -19,7 +19,7 @@ class CreateDataSourceStationIdentifiersTable extends Migration
             $table->bigInteger('station_id')->unsigned();
             $table->string('identifier')->index();
             $table->foreign('data_source_id')->on('data_sources')->references('id');
-            $table->foreign('station_id')->on('station')->references('id');
+            $table->foreign('station_id')->on('stations')->references('id');
         });
     }
 

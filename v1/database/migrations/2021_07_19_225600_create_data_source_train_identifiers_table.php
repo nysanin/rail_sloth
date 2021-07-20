@@ -19,7 +19,7 @@ class CreateDataSourceTrainIdentifiersTable extends Migration
             $table->bigInteger('train_id')->unsigned();
             $table->string('identifier')->index();
             $table->foreign('data_source_id')->on('data_sources')->references('id');
-            $table->foreign('tran_id')->on('trains')->references('id');
+            $table->foreign('train_id')->on('trains')->references('id');
         });
     }
 

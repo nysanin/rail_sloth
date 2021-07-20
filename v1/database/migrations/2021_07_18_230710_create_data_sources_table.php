@@ -17,7 +17,6 @@ class CreateDataSourcesTable extends Migration
             $table->id();
             $table->string('name', 60)->unique();
             $table->string('endpoint');
-            $table->json('specials')->nullable();
         });
     }
 
