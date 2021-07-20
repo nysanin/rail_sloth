@@ -16,11 +16,11 @@ class RailOperatorsTableSeeder extends Seeder
     {
         RailOperator::create([
             'country_id'=>1,
-            'name'=>'IC',
+            'name'=>'PKP Intercity',
         ]);
         RailOperator::create([
             'country_id'=>1,
-            'name'=>'TLK',
+            'name'=>'PKP Polregio',
         ]);
         RailOperator::create([
             'country_id'=>1,

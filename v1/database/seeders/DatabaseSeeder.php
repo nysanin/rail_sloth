@@ -15,5 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(CountriesTableSeeder::class);
         $this->call(DataSourceTableSeeder::class);
+        $this->call(TrainCategoriesTableSeeder::class);
+        $this->call(RailOperatorsTableSeeder::class);
+        $this->call(StationTableSeeder::class);
     }
 }
