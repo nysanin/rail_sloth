@@ -19,7 +19,7 @@ class CreateTrainTripsTable extends Migration
             $table->dateTime('started_at');
             $table->dateTime('planned_at');
             $table->dateTime('arrived_at')->nullable();
-            $table->dateTime('last_synchro_at')->nullable();
+            $table->dateTime('last_synchro_at');
             $table->boolean('delayed')->default(false);
             $table->boolean('cancelled')->default(false);
             $table->text('special_info')->nullable();

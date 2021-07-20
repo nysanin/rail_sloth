@@ -19,7 +19,7 @@ class CreateStationsTable extends Migration
             $table->string('name');
             $table->string('en_name')->nullable();
             $table->string('class', 10)->nullable();
-            $table->dateTime('last_synchro_at')->nullable();
+            $table->dateTime('last_synchro_at');
             $table->foreign('country_id')->references('id')->on('countries');
         });
     }

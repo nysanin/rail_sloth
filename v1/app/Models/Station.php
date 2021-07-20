@@ -10,7 +10,7 @@ class Station extends Model
     use HasFactory;
     public $timestamps=false;
     protected $fillable=[
-      'country_id', 'name', 'en_name', 'category',
+      'country_id', 'name', 'en_name', 'class', 'last_synchro_at',
     ];
 
     public function trains()
